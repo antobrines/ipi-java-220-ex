@@ -35,6 +35,14 @@ public class Employe {
         return Entreprise.NB_CONGES_BASE;
     }
 
+    public String toString(){
+        return "Employe{nom='" + nom
+                + "', prenom='" + prenom
+                + "', matricule='" + matricule
+                + "', dateEmbauche=" + dateEmbauche
+                + ", salaire=" + salaire + "}";
+    }
+
     public String getNom() {
         return nom;
     }
