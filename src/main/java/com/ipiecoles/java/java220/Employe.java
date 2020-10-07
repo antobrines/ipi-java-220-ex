@@ -27,6 +27,10 @@ public class Employe {
         this.salaire = salaire;
     }
 
+    public final Integer getNombreAnneeAnciennete(){
+        return LocalDate.now().getYear() - dateEmbauche.getYear();
+    }
+
     public String getNom() {
         return nom;
     }
