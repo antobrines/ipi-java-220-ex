@@ -6,7 +6,8 @@ public class Commercial extends Employe{
 
     @Override
     public Double getPrimeAnnuelle() {
-        return null;
+        double primeAnnuelle = Math.ceil(this.getCaAnnuel() * 0.05);
+        return primeAnnuelle < 500 ? 500 : primeAnnuelle;
     }
 
     public Double getCaAnnuel() {
