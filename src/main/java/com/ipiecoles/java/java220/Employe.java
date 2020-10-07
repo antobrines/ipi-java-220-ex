@@ -2,6 +2,8 @@ package com.ipiecoles.java.java220;
 
 import org.joda.time.LocalDate;
 
+import java.util.Objects;
+
 /**
  * Created by pjvilloud on 21/09/17.
  */
@@ -41,6 +43,18 @@ public class Employe {
                 + "', matricule='" + matricule
                 + "', dateEmbauche=" + dateEmbauche
                 + ", salaire=" + salaire + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employe)) return false;
+        Employe employe = (Employe) o;
+        return Objects.equals(getNom(), employe.getNom()) &&
+                Objects.equals(getPrenom(), employe.getPrenom()) &&
+                Objects.equals(getMatricule(), employe.getMatricule()) &&
+                Objects.equals(getDateEmbauche(), employe.getDateEmbauche()) &&
+                Objects.equals(getSalaire(), employe.getSalaire());
     }
 
     public String getNom() {
