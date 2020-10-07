@@ -57,6 +57,11 @@ public class Employe {
                 Objects.equals(getSalaire(), employe.getSalaire());
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire);
+    }
+
     public String getNom() {
         return nom;
     }
