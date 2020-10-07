@@ -31,6 +31,10 @@ public class Employe {
         return LocalDate.now().getYear() - dateEmbauche.getYear();
     }
 
+    public Integer getNbConges(){
+        return Entreprise.NB_CONGES_BASE;
+    }
+
     public String getNom() {
         return nom;
     }
