@@ -21,6 +21,13 @@ public class Manager extends Employe{
         super.setSalaire(salaire * Entreprise.INDICE_MANAGER + (salaire * nbEmployeEquipe / 10));
     }
 
+    private void augmenterSalaireEquipe(Double pourcentage) {
+        for (Technicien technicien:
+             this.equipe) {
+            technicien.augmenterSalaire(pourcentage);
+        }
+    }
+
     public HashSet<Technicien> getEquipe() {
         return equipe;
     }
