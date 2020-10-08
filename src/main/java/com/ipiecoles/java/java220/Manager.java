@@ -1,10 +1,21 @@
 package com.ipiecoles.java.java220;
 
+import org.joda.time.LocalDate;
+
 import java.util.HashSet;
 
 public class Manager extends Employe{
 
     private HashSet<Technicien> equipe = new HashSet<>();
+
+    public Manager(){
+
+    }
+
+    public Manager(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, HashSet<Technicien> equipe) {
+        super(nom, prenom, matricule, dateEmbauche, salaire);
+        this.equipe = equipe;
+    }
 
     @Override
     public Double getPrimeAnnuelle() {
