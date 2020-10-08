@@ -66,9 +66,7 @@ public abstract class Employe {
         this.salaire = this.getSalaire() * (1 + pourcentage);
     }
 
-    public Double getPrimeAnnuelle(){
-        return Entreprise.primeAnnuelleBase();
-    }
+    public abstract Double getPrimeAnnuelle();
 
     public String getNom() {
         return nom;
