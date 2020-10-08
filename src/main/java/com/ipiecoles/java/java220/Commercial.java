@@ -8,6 +8,8 @@ public class Commercial extends Employe{
 
     private Double caAnnuel = 0d;
 
+    private Integer performance = 0;
+
     public Commercial() {
 
     }
@@ -15,6 +17,16 @@ public class Commercial extends Employe{
     public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel) {
         super(nom, prenom, matricule, dateEmbauche, salaire);
         this.caAnnuel = caAnnuel;
+    }
+
+    public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel, Integer performance) {
+        super(nom, prenom, matricule, dateEmbauche, salaire);
+        this.caAnnuel = caAnnuel;
+        this.performance = performance;
+    }
+
+    public Boolean performanceEgale(Integer perf){
+        return perf.equals(this.performance);
     }
 
     @Override
@@ -39,4 +51,13 @@ public class Commercial extends Employe{
     public void setCaAnnuel(Double caAnnuel) {
         this.caAnnuel = caAnnuel;
     }
+
+    public Integer getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(Integer performance) {
+        this.performance = performance;
+    }
+
 }
