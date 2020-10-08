@@ -29,6 +29,25 @@ public class Commercial extends Employe{
         return perf.equals(this.performance);
     }
 
+    public Note equivalenceNote(){
+        switch (this.performance) {
+            //merge with
+            case 0:
+            case 50:
+                return Note.INSUFFISANT;
+            case 100:
+                return Note.PASSABLE;
+            case 150:
+                return Note.BIEN;
+            case 200:
+                return Note.TRES_BIEN;
+            default:
+                return null;
+
+        }
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
