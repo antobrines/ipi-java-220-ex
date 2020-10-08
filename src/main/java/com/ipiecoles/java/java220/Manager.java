@@ -28,6 +28,12 @@ public class Manager extends Employe{
         }
     }
 
+    @Override
+    public void augmenterSalaire(Double pourcentage) {
+        super.augmenterSalaire(pourcentage);
+        this.augmenterSalaireEquipe(pourcentage);
+    }
+
     public HashSet<Technicien> getEquipe() {
         return equipe;
     }
