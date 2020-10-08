@@ -20,6 +20,11 @@ public class Technicien extends Employe{
         super.setSalaire(salaire * (1 + (double) this.grade / 10));
     }
 
+    @Override
+    public Integer getNbConges() {
+        return super.getNbConges() + this.getNombreAnneeAnciennete();
+    }
+
     public Integer getGrade() {
         return grade;
     }
