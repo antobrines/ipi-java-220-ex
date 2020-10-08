@@ -15,6 +15,12 @@ public class Manager extends Employe{
         equipe.add(technicien);
     }
 
+    public void setSalaire(Double salaire) {
+        double nbEmployeEquipe = this.equipe.size();
+        super.setSalaire(salaire * Entreprise.INDICE_MANAGER + (salaire * nbEmployeEquipe / 10));
+    }
+
+
     public HashSet<Technicien> getEquipe() {
         return equipe;
     }
