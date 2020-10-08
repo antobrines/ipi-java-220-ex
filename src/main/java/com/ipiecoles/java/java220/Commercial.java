@@ -54,7 +54,13 @@ public class Commercial extends Employe{
         if (!(o instanceof Commercial)) return false;
         if (!super.equals(o)) return false;
         Commercial that = (Commercial) o;
-        return Objects.equals(getCaAnnuel(), that.getCaAnnuel());
+        return getCaAnnuel().equals(that.getCaAnnuel()) &&
+                getPerformance().equals(that.getPerformance());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getCaAnnuel(), getPerformance());
     }
 
     @Override
