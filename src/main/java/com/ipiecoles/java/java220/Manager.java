@@ -8,7 +8,8 @@ public class Manager extends Employe{
 
     @Override
     public Double getPrimeAnnuelle() {
-        return null;
+        double nbEmployeEquipe = this.equipe.size();
+        return Entreprise.primeAnnuelleBase() + nbEmployeEquipe * Entreprise.PRIME_MANAGER_PAR_TECHNICIEN;
     }
 
     public void ajoutTechnicienEquipe(Technicien technicien) {
@@ -19,7 +20,6 @@ public class Manager extends Employe{
         double nbEmployeEquipe = this.equipe.size();
         super.setSalaire(salaire * Entreprise.INDICE_MANAGER + (salaire * nbEmployeEquipe / 10));
     }
-
 
     public HashSet<Technicien> getEquipe() {
         return equipe;
