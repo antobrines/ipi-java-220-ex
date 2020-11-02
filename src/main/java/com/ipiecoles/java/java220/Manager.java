@@ -23,8 +23,9 @@ public class Manager extends Employe{
         return Entreprise.primeAnnuelleBase() + nbEmployeEquipe * Entreprise.PRIME_MANAGER_PAR_TECHNICIEN;
     }
 
-    public void ajoutTechnicienEquipe(Technicien technicien) {
-        equipe.add(technicien);
+    //508 à voir
+    public void ajoutTechnicienEquipe(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Integer grade) {
+        equipe.add(new Technicien(nom, prenom, matricule, dateEmbauche, salaire, grade));
     }
 
     public void setSalaire(Double salaire) {
